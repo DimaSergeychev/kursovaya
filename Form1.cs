@@ -25,6 +25,7 @@ namespace WindowsFormsApp4
         PaintPoint ColorNine;  //Девятый круг
 
         CounterPoint cp;    //Счетчик частиц
+        float mx, my;
         public Form1()
         {
             InitializeComponent();
@@ -197,7 +198,13 @@ namespace WindowsFormsApp4
 
         private void picDisplay_Click(object sender, EventArgs e)
         {
+            cp = new CounterPoint
+            {
+                X = emitter.MousePositionX,
+                Y = emitter.MousePositionY
+            };
 
+            emitter.impactPoints.Add(cp);
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
@@ -346,6 +353,17 @@ namespace WindowsFormsApp4
                 ColorNine.FellColor = colorDialog1.Color;
                 ColorNine.FillColor = colorDialog1.Color;
             }
+        }
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            mx = e.X;
+            my = e.Y;
+        }
+
+        private void Form1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

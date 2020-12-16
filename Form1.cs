@@ -23,6 +23,8 @@ namespace WindowsFormsApp4
         PaintPoint ColorSeven;  //Седьмой круг
         PaintPoint ColorEight;  //Восьмой круг
         PaintPoint ColorNine;  //Девятый круг
+
+        CounterPoint cp;    //Счетчик частиц
         public Form1()
         {
             InitializeComponent();
@@ -37,6 +39,15 @@ namespace WindowsFormsApp4
                 SpeedMax = 50,
                 ParticlesCount = 1500
             };
+
+            cp = new CounterPoint
+            {
+                X = picDisplay.Width / 2,
+                Y = picDisplay.Height / 2
+            };
+
+            emitter.impactPoints.Add(cp);
+
             ColorOne = new PaintPoint    // Расположение первого круга
             {
                 X = picDisplay.Width / 2 - 420 ,

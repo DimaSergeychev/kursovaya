@@ -58,6 +58,50 @@ namespace WindowsFormsApp4
                 );
         }
     }
+
+    public class CounterPoint : IImpactPoint
+    {
+        public int Power = 100;
+        public int counter = 0;
+
+        public override void ImpactParticle(Particle particle)
+        {
+            float gX = X - particle.X;
+            float gY = Y - particle.Y;
+            double r = Math.Sqrt(gX * gX + gY * gY); // считаем расстояние от центра точки до центра частицы
+            if (r + particle.Radius < Power / 1.5) // если частица оказалось внутри окружности
+            {
+                if (particle.lastVisited != this) counter++;
+                particle.lastVisited = this;
+
+            }
+
+        }
+
+        public override void Render(Graphics g)
+        {
+            g.DrawEllipse(
+                new Pen(Color.White, 5),
+                X - Power / 2,
+                Y - Power / 2,
+                Power,
+                Power
+                );
+
+            var stringFormat = new StringFormat(); // создаем экземпляр класса
+            stringFormat.Alignment = StringAlignment.Center; // выравнивание по горизонтали
+            stringFormat.LineAlignment = StringAlignment.Center; // выравнивание по вертикали
+
+            g.DrawString(
+                counter.ToString(),
+                new Font("Verdana", 10),
+                new SolidBrush(Color.White),
+                X,
+                Y,
+                stringFormat
+            );
+        }
+    }
 }
 
    

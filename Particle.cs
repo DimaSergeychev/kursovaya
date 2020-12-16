@@ -17,6 +17,7 @@ namespace WindowsFormsApp4
         public float SpeedY;
 
         public float Life;
+        public IImpactPoint lastVisited;
 
         public static Random rand = new Random();
 

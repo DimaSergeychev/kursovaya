@@ -24,8 +24,7 @@ namespace WindowsFormsApp4
         PaintPoint ColorEight;  //Восьмой круг
         PaintPoint ColorNine;  //Девятый круг
 
-        CounterPoint cp;    //Счетчик частиц
-        float mx, my;
+        CounterPoint cp;
         public Form1()
         {
             InitializeComponent();
@@ -49,9 +48,10 @@ namespace WindowsFormsApp4
 
             emitter.impactPoints.Add(cp);
 
+
             ColorOne = new PaintPoint    // Расположение первого круга
             {
-                X = picDisplay.Width / 2 - 420 ,
+                X = picDisplay.Width / 2 - 420,
                 Y = picDisplay.Height / 2,
                 FillColor = Color.Red,
                 FellColor = Color.Red
@@ -196,20 +196,9 @@ namespace WindowsFormsApp4
             emitter.MousePositionY = e.Y;
         }
 
-        private void picDisplay_Click(object sender, EventArgs e)
-        {
-            cp = new CounterPoint
-            {
-                X = emitter.MousePositionX,
-                Y = emitter.MousePositionY
-            };
-
-            emitter.impactPoints.Add(cp);
-        }
-
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-            ColorOne.Y = picDisplay.Height * (1f - trackBar1.Value/100f);
+            ColorOne.Y = picDisplay.Height * (1f - trackBar1.Value / 100f);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -345,7 +334,6 @@ namespace WindowsFormsApp4
                 ColorEight.FillColor = colorDialog1.Color;
             }
         }
-
         private void button9_Click(object sender, EventArgs e)
         {
             if (colorDialog1.ShowDialog() == DialogResult.OK)
@@ -354,14 +342,40 @@ namespace WindowsFormsApp4
                 ColorNine.FillColor = colorDialog1.Color;
             }
         }
-
-        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        private void picDisplay_MouseClick(object sender, MouseEventArgs e)
         {
-            mx = e.X;
-            my = e.Y;
-        }
+            List<IImpactPoint> temp = new List<IImpactPoint>();
+            switch (e.Button)
+            {
 
-        private void Form1_Click(object sender, EventArgs e)
+                case MouseButtons.Left:
+                    cp = new CounterPoint
+                    {
+                        X = emitter.MousePositionX,
+                        Y = emitter.MousePositionY
+                    };
+
+                    emitter.impactPoints.Add(cp);
+                    break;
+
+                case MouseButtons.Right:
+                    foreach (var ep in emitter.impactPoints)
+                    {
+                        if (ep.GetType().Name == "CounterPoint")
+                        {
+                            double distance = Math.Sqrt(Math.Pow(emitter.MousePositionX - ep.X, 2) + Math.Pow(emitter.MousePositionX - ep.X, 2));
+                            if (distance < ep.Power / 2) temp.Add(ep);
+
+                        }
+                    }
+                    break;
+            }
+            foreach (var t in temp)
+            {
+                emitter.impactPoints.Remove(t);
+            }
+        }
+        private void picDisplay_Click(object sender, EventArgs e)
         {
 
         }

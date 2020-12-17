@@ -14,6 +14,8 @@ namespace WindowsFormsApp4
         public Color FillColor;
         public Color FellColor;
 
+        public int Power = 100;
+
         public abstract void ImpactParticle(Particle particle);
 
         public virtual void Render(Graphics g)
@@ -30,7 +32,6 @@ namespace WindowsFormsApp4
 
     public class PaintPoint : IImpactPoint
     {
-        public int Power = 100;
 
         public override void ImpactParticle(Particle particle)
         {
@@ -61,7 +62,6 @@ namespace WindowsFormsApp4
 
     public class CounterPoint : IImpactPoint
     {
-        public int Power = 100;
         public int counter = 0;
 
         public override void ImpactParticle(Particle particle)
@@ -73,7 +73,6 @@ namespace WindowsFormsApp4
             {
                 if (particle.lastVisited != this) counter++;
                 particle.lastVisited = this;
-
             }
 
         }
@@ -104,4 +103,4 @@ namespace WindowsFormsApp4
     }
 }
 
-   
+

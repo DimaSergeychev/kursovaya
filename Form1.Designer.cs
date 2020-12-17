@@ -225,9 +225,8 @@
             this.label2.Location = new System.Drawing.Point(299, 684);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 17);
+            this.label2.Size = new System.Drawing.Size(0, 17);
             this.label2.TabIndex = 12;
-            this.label2.Text = "1500";
             // 
             // trackBar11
             // 

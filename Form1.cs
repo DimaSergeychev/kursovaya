@@ -31,6 +31,8 @@ namespace WindowsFormsApp4
             picDisplay.Image = new Bitmap(picDisplay.Width, picDisplay.Height);
             this.MouseWheel += new MouseEventHandler(this_MouseWheel);
 
+
+
             emitter = new TopEmitter
             {
                 Width = picDisplay.Width,
@@ -139,6 +141,8 @@ namespace WindowsFormsApp4
 
             };
             emitter.impactPoints.Add(ColorNine);
+
+            label2.Text = "850";
         }
 
         void this_MouseWheel(object sender, MouseEventArgs e)  //   Изменение размера кругов с помощью колёсика мыши
@@ -177,6 +181,14 @@ namespace WindowsFormsApp4
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            foreach(var temp in emitter.particles)
+            {
+                if(temp.X > picDisplay.Width || temp.Y > picDisplay.Height)
+                {
+                    temp.Life -= 50;
+                }
+            }
+
             emitter.UpdateState();
 
             using (var g = Graphics.FromImage(picDisplay.Image))

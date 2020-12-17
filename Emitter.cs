@@ -12,7 +12,7 @@ namespace WindowsFormsApp4
         public float GravitationX = 0;
         public float GravitationY = 0;
 
-        List<Particle> particles = new List<Particle>();
+        public List<Particle> particles = new List<Particle>();
 
         public int MousePositionX;
         public int MousePositionY;

@@ -25,6 +25,7 @@ namespace WindowsFormsApp4
         PaintPoint ColorNine;  //Девятый круг
 
         CounterPoint cp;
+        float mx, my;
         public Form1()
         {
             InitializeComponent();
@@ -342,6 +343,18 @@ namespace WindowsFormsApp4
                 ColorNine.FillColor = colorDialog1.Color;
             }
         }
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            mx = e.X;
+            my = e.Y;
+        }
+
+        private void Form1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void picDisplay_MouseClick(object sender, MouseEventArgs e)
         {
             List<IImpactPoint> temp = new List<IImpactPoint>();

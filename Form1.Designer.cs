@@ -89,7 +89,7 @@
             // trackBar1
             // 
             this.trackBar1.Location = new System.Drawing.Point(50, 438);
-            this.trackBar1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.trackBar1.Margin = new System.Windows.Forms.Padding(2);
             this.trackBar1.Maximum = 100;
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Orientation = System.Windows.Forms.Orientation.Vertical;
@@ -101,7 +101,7 @@
             // trackBar2
             // 
             this.trackBar2.Location = new System.Drawing.Point(176, 438);
-            this.trackBar2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.trackBar2.Margin = new System.Windows.Forms.Padding(2);
             this.trackBar2.Maximum = 100;
             this.trackBar2.Name = "trackBar2";
             this.trackBar2.Orientation = System.Windows.Forms.Orientation.Vertical;
@@ -113,7 +113,7 @@
             // trackBar3
             // 
             this.trackBar3.Location = new System.Drawing.Point(310, 438);
-            this.trackBar3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.trackBar3.Margin = new System.Windows.Forms.Padding(2);
             this.trackBar3.Maximum = 100;
             this.trackBar3.Name = "trackBar3";
             this.trackBar3.Orientation = System.Windows.Forms.Orientation.Vertical;
@@ -125,7 +125,7 @@
             // trackBar4
             // 
             this.trackBar4.Location = new System.Drawing.Point(452, 438);
-            this.trackBar4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.trackBar4.Margin = new System.Windows.Forms.Padding(2);
             this.trackBar4.Maximum = 100;
             this.trackBar4.Name = "trackBar4";
             this.trackBar4.Orientation = System.Windows.Forms.Orientation.Vertical;
@@ -137,7 +137,7 @@
             // trackBar5
             // 
             this.trackBar5.Location = new System.Drawing.Point(592, 438);
-            this.trackBar5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.trackBar5.Margin = new System.Windows.Forms.Padding(2);
             this.trackBar5.Maximum = 100;
             this.trackBar5.Name = "trackBar5";
             this.trackBar5.Orientation = System.Windows.Forms.Orientation.Vertical;
@@ -149,7 +149,7 @@
             // trackBar6
             // 
             this.trackBar6.Location = new System.Drawing.Point(745, 438);
-            this.trackBar6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.trackBar6.Margin = new System.Windows.Forms.Padding(2);
             this.trackBar6.Maximum = 100;
             this.trackBar6.Name = "trackBar6";
             this.trackBar6.Orientation = System.Windows.Forms.Orientation.Vertical;
@@ -161,7 +161,7 @@
             // trackBar7
             // 
             this.trackBar7.Location = new System.Drawing.Point(887, 438);
-            this.trackBar7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.trackBar7.Margin = new System.Windows.Forms.Padding(2);
             this.trackBar7.Maximum = 100;
             this.trackBar7.Name = "trackBar7";
             this.trackBar7.Orientation = System.Windows.Forms.Orientation.Vertical;
@@ -173,7 +173,7 @@
             // trackBar8
             // 
             this.trackBar8.Location = new System.Drawing.Point(1024, 438);
-            this.trackBar8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.trackBar8.Margin = new System.Windows.Forms.Padding(2);
             this.trackBar8.Maximum = 100;
             this.trackBar8.Name = "trackBar8";
             this.trackBar8.Orientation = System.Windows.Forms.Orientation.Vertical;
@@ -185,7 +185,7 @@
             // trackBar9
             // 
             this.trackBar9.Location = new System.Drawing.Point(29, 660);
-            this.trackBar9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.trackBar9.Margin = new System.Windows.Forms.Padding(2);
             this.trackBar9.Maximum = 1500;
             this.trackBar9.Minimum = 300;
             this.trackBar9.Name = "trackBar9";
@@ -197,7 +197,7 @@
             // trackBar10
             // 
             this.trackBar10.Location = new System.Drawing.Point(387, 660);
-            this.trackBar10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.trackBar10.Margin = new System.Windows.Forms.Padding(2);
             this.trackBar10.Maximum = 30;
             this.trackBar10.Minimum = 1;
             this.trackBar10.Name = "trackBar10";
@@ -230,7 +230,7 @@
             // trackBar11
             // 
             this.trackBar11.Location = new System.Drawing.Point(1154, 438);
-            this.trackBar11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.trackBar11.Margin = new System.Windows.Forms.Padding(2);
             this.trackBar11.Maximum = 100;
             this.trackBar11.Name = "trackBar11";
             this.trackBar11.Orientation = System.Windows.Forms.Orientation.Vertical;
@@ -242,7 +242,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(33, 591);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(65, 22);
             this.button1.TabIndex = 14;
@@ -253,7 +253,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(157, 591);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(65, 22);
             this.button2.TabIndex = 15;
@@ -264,7 +264,7 @@
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(291, 591);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(65, 22);
             this.button3.TabIndex = 16;
@@ -275,7 +275,7 @@
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(435, 591);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(65, 22);
             this.button4.TabIndex = 17;
@@ -286,7 +286,7 @@
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(573, 591);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(65, 22);
             this.button5.TabIndex = 18;
@@ -297,7 +297,7 @@
             // button6
             // 
             this.button6.Location = new System.Drawing.Point(725, 591);
-            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(65, 22);
             this.button6.TabIndex = 19;
@@ -308,7 +308,7 @@
             // button7
             // 
             this.button7.Location = new System.Drawing.Point(869, 591);
-            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(65, 22);
             this.button7.TabIndex = 20;
@@ -319,7 +319,7 @@
             // button8
             // 
             this.button8.Location = new System.Drawing.Point(1006, 591);
-            this.button8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button8.Margin = new System.Windows.Forms.Padding(2);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(65, 22);
             this.button8.TabIndex = 21;
@@ -330,7 +330,7 @@
             // button9
             // 
             this.button9.Location = new System.Drawing.Point(1137, 591);
-            this.button9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button9.Margin = new System.Windows.Forms.Padding(2);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(65, 22);
             this.button9.TabIndex = 22;

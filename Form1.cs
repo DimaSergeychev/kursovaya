@@ -39,7 +39,7 @@ namespace WindowsFormsApp4
                 GravitationY = 0.25f,
                 Speedmin = 10,
                 SpeedMax = 50,
-                ParticlesCount = 1500
+                ParticlesCount = 100
             };
 
             cp = new CounterPoint
@@ -141,8 +141,6 @@ namespace WindowsFormsApp4
 
             };
             emitter.impactPoints.Add(ColorNine);
-
-            label2.Text = "850";
         }
 
         void this_MouseWheel(object sender, MouseEventArgs e)  //   Изменение размера кругов с помощью колёсика мыши
@@ -181,14 +179,6 @@ namespace WindowsFormsApp4
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            foreach(var temp in emitter.particles)
-            {
-                if(temp.X > picDisplay.Width || temp.Y > picDisplay.Height)
-                {
-                    temp.Life -= 50;
-                }
-            }
-
             emitter.UpdateState();
 
             using (var g = Graphics.FromImage(picDisplay.Image))
@@ -198,8 +188,6 @@ namespace WindowsFormsApp4
             }
 
             picDisplay.Invalidate();
-
-
         }
 
         private void picDisplay_MouseMove(object sender, MouseEventArgs e)
@@ -255,8 +243,8 @@ namespace WindowsFormsApp4
 
         private void trackBar9_Scroll(object sender, EventArgs e)
         {
-            emitter.ParticlesCount = trackBar9.Value;
-            label2.Text = emitter.ParticlesCount.ToString();
+            emitter.ParticlesPerTick = trackBar9.Value;
+            label2.Text = emitter.ParticlesPerTick.ToString();
         }
 
         private void trackBar10_Scroll(object sender, EventArgs e)
@@ -389,6 +377,11 @@ namespace WindowsFormsApp4
             }
         }
         private void picDisplay_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

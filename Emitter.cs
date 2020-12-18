@@ -17,12 +17,17 @@ namespace WindowsFormsApp4
         public int MousePositionX;
         public int MousePositionY;
 
+        public int ParticlesPerTick = 10;
+
         public int Speedmin = 1;    // Минимальная скорость падения частиц
         public int SpeedMax = 10;    // Максимальная скорость падения частиц
 
+        public Color ColorFrom = Color.White; // начальный цвет частицы
+        public Color ColorTo = Color.FromArgb(0, Color.Black); // конечный цвет частиц
+
         public List<IImpactPoint> impactPoints = new List<IImpactPoint>();
 
-        public int ParticlesCount = 1500;  // Количество частиц
+        public int ParticlesCount = 100;  // Количество частиц
         public virtual void ResetParticle(Particle particle)
         {
             particle.Life = 70 + Particle.rand.Next(100);
@@ -45,60 +50,55 @@ namespace WindowsFormsApp4
             }
         }
 
+        public virtual Particle CreateParticle()
+        {
+            var particle = new ParticleColorful();
+            particle.FromColor = ColorFrom;
+            particle.ToColor = ColorTo;
+
+            return particle;
+        }
         public void UpdateState()
         {
-            List<Particle> temp = new List<Particle>();
+            // изменение состояния частиц
+            int particlesToCreate = ParticlesPerTick;
+
             foreach (var particle in particles)
             {
-                particle.Life -= 1;  
+                particle.Life -= 1;
                 if (particle.Life < 0)
                 {
-
-                    if (particles.Count > ParticlesCount)
+                    if (particlesToCreate > 0)
                     {
-                        temp.Add(particle);
-                        
-                    } else
-                    {
+                        /* у нас как сброс частицы равносилен созданию частицы */
+                        particlesToCreate -= 1; // поэтому уменьшаем счётчик созданных частиц на 1
                         ResetParticle(particle);
                     }
                 }
                 else
                 {
+                    // двигаем частицу
+                    particle.X += particle.SpeedX;
+                    particle.Y += particle.SpeedY;
+
+                    // перебираем все точки и пересчитываем их влияние на частицы
                     foreach (var point in impactPoints)
                     {
                         point.ImpactParticle(particle);
                     }
 
+                    // изменяем скорость частиц под действием гравитации
                     particle.SpeedX += GravitationX;
                     particle.SpeedY += GravitationY;
-
-                    particle.X += particle.SpeedX;
-                    particle.Y += particle.SpeedY;
                 }
             }
 
-            foreach (var t in temp)
+            while (particlesToCreate >= 1)
             {
-                particles.Remove(t);
-            }
-
-            for (var i = 0; i < 10; ++i)
-            {
-                if (particles.Count < ParticlesCount)
-                {
-                    var particle = new ParticleColorful();
-                    particle.FromColor = Color.White;
-                    particle.ToColor = Color.FromArgb(0, Color.White);
-
-                    ResetParticle(particle);
-
-                    particles.Add(particle);
-                }
-                else
-                {
-                    break;
-                }
+                particlesToCreate -= 1;
+                var particle = CreateParticle();
+                ResetParticle(particle);
+                particles.Add(particle);
             }
         }
 

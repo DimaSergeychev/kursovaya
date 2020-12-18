@@ -73,7 +73,7 @@ namespace WindowsFormsApp4
             {
                 if (particle.lastVisited != this) counter++;
                 particle.lastVisited = this;
-                particle.Life = 0;
+                particle.Life = 0;      
             }
 
         }

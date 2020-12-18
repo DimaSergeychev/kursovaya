@@ -186,14 +186,14 @@
             // 
             // trackBar9
             // 
-            this.trackBar9.Location = new System.Drawing.Point(22, 660);
+            this.trackBar9.Location = new System.Drawing.Point(21, 660);
             this.trackBar9.Margin = new System.Windows.Forms.Padding(2);
-            this.trackBar9.Maximum = 1500;
-            this.trackBar9.Minimum = 300;
+            this.trackBar9.Maximum = 60;
+            this.trackBar9.Minimum = 10;
             this.trackBar9.Name = "trackBar9";
             this.trackBar9.Size = new System.Drawing.Size(273, 56);
             this.trackBar9.TabIndex = 9;
-            this.trackBar9.Value = 850;
+            this.trackBar9.Value = 30;
             this.trackBar9.Scroll += new System.EventHandler(this.trackBar9_Scroll);
             // 
             // trackBar10
@@ -222,11 +222,13 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(299, 684);
+            this.label2.Location = new System.Drawing.Point(299, 668);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 17);
+            this.label2.Size = new System.Drawing.Size(24, 17);
             this.label2.TabIndex = 12;
+            this.label2.Text = "10";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // trackBar11
             // 

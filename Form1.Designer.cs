@@ -227,7 +227,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(24, 17);
             this.label2.TabIndex = 12;
-            this.label2.Text = "10";
+            this.label2.Text = "30";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // trackBar11

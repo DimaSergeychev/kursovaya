@@ -23,7 +23,6 @@ namespace WindowsFormsApp4
         PaintPoint ColorSeven;  //Седьмой круг
         PaintPoint ColorEight;  //Восьмой круг
         PaintPoint ColorNine;  //Девятый круг
-
         CounterPoint cp;
         public Form1()
         {

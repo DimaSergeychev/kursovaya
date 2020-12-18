@@ -12,7 +12,6 @@ namespace WindowsFormsApp4
         public int Radius;
         public float X;
         public float Y; 
-
         public float SpeedX;
         public float SpeedY;
 

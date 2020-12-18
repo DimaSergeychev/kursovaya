@@ -59,7 +59,6 @@ namespace WindowsFormsApp4
                 );
         }
     }
-
     public class CounterPoint : IImpactPoint
     {
         public int counter = 0;

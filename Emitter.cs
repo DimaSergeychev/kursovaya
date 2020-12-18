@@ -101,7 +101,6 @@ namespace WindowsFormsApp4
                 particles.Add(particle);
             }
         }
-
         public void Render(Graphics g)
         {
             foreach (var particle in particles)
